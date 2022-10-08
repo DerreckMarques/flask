@@ -1,3 +1,5 @@
+import string
+from xml.etree.ElementTree import tostring
 from db.models import User
 from db import db
 
@@ -19,4 +21,4 @@ def populate_db():
     ]
     db.session.bulk_save_objects(data)
     db.session.commit()
-    return User.query.all()
+    return tostring(User.query.all())

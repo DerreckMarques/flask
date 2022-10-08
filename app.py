@@ -3,6 +3,7 @@ from db import db, commands
 
 
 app = Flask(__name__)
+db.__init__(app)
 
 @app.route("/")
 def index():
