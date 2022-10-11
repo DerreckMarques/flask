@@ -1,3 +1,4 @@
+from testes.site import main
 import os
 from flask import Flask, render_template, request, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy
@@ -7,16 +8,23 @@ from sqlalchemy.sql import func
 
 
 
+
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
+
+
+main.init_app(app)
+
+
+
+'''
 app.config['SQLALCHEMY_DATABASE_URI'] =\
         'sqlite:///' + os.path.join(basedir, 'testes.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
-
-
+'''
 # ...
 
 
