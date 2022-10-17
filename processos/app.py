@@ -1,10 +1,15 @@
-from processos.ext import rotas
 from flask import Flask
 
-app = Flask(__name__)
+from processos.ext import config
 
 
-rotas.init_app(app)
+
+def create_app():
+    app = Flask(__name__)
+    config.init_app(app)
+    return app
+
+
 
 
 
