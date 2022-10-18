@@ -1,22 +1,17 @@
 {% extends 'base.html' %}
 
+
+<h1 class="title">{% block title %} Students {% endblock %}</h1>
+
 {% block content %}
-    <h1 class="title">{% block title %} Students {% endblock %}</h1>
-    <div class="content">
-        {% for student in students %}
-            <div class="student">
-                <p><b>#{{ student.id }}</b></p>
-                <b>
-                    <p class="name">{{ student.firstname }} {{ student.lastname }}</p>
-                </b>
-                <p>{{ student.email }}</p>
-                <p>{{ student.age }} years old.</p>
-                <p>Joined: {{ student.created_at }}</p>
-                <div class="bio">
-                    <h4>Bio</h4>
-                    <p>{{ student.bio }}</p>
-                </div>
-            </div>
-        {% endfor %}
+<section class="section">
+    <div class="container">
+      <h1 class="title">
+        Hello World
+      </h1>
+      <p class="subtitle">
+        My first website with <strong>Bulma</strong>!
+      </p>
     </div>
+  </section>
 {% endblock %}
