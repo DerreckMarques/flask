@@ -1,0 +1,13 @@
+[default]
+EXTENSIONS = [
+  "flask_admin:Admin",
+  "flask_bootstrap:Bootstrap",
+  "custom_extension.module:init_app"
+]
+TESTE="Hello World!"
+
+[development]
+EXTENSIONS = [
+  "dynaconf_merge",
+  "flask_debugtoolbar:DebugToolbar"
+]
