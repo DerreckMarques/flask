@@ -3,12 +3,15 @@ DEBUG = false
 #FLASK_ADMIN_SWATCH = "cerulean"
 ADMIN_NAME = "Twitch Foods"
 EXTENSIONS = [
-    "processos.ext.rotas:init_app",
+    "processos.ext.rotas:init_app", 
+    "processos.ext.db:init_app",
 ]
+SQLALCHEMY_DATABASE_URI = "sqlite:///testes.db"
+SQLALCHEMY_TRACK_MODIFICATIONS = false
 
 [development]
 DEBUG = true
-SQLALCHEMY_DATABASE_URI = "sqlite:///delivery.db"
+SQLALCHEMY_DATABASE_URI = "sqlite:///testes.db"
 SQLALCHEMY_TRACK_MODIFICATIONS = false
 DEBUG_TB_TEMPLATE_EDITOR_ENABLED = true
 DEBUG_TB_PROFILER_ENABLED = true
@@ -16,6 +19,7 @@ DEBUG_TB_INTERCEPT_REDIRECTS = false
 ADMIN_NAME = "Twitch Foods (dev mode)"
 EXTENSIONS = [
     "processos.ext.rotas:init_app",
+    "processos.ext.db:init_app",
 ]
 
 

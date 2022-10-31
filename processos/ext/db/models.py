@@ -1,8 +1,8 @@
 
-#from app import db
+from processos.ext.db import db
 
 
-class Student(db.Model):
+class Processo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     texto = db.Column(db.Text, nullable=False)
     categoria = db.Column(db.String(100), nullable=False)

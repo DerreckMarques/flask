@@ -6,12 +6,17 @@
 {% block content %}
 <section class="section">
     <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
+      {% for processo in processos %}
+        <div>
+          <p><b>#{{ processo.id }}</b></p>
+          <p>{{ processo.categoria }}</p>
+          
+          <div>
+            <h4>{{ processo.nome }}</h4>
+            <p>{{ processo.texto }}</p>
+          </div>
+        </div>
+      {% endfor %}
     </div>
   </section>
 {% endblock %}
